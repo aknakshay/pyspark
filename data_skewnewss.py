@@ -30,7 +30,7 @@ def get_report(data):
     Tells about total number of partitions
     Plots the skewness
     """
-    print("Total Partitions " + str(data))
+    print("Total Partitions " + str(total_partitions(data)))
     skewness_df = find_skewness(data)
     plot_skewness(skewness_df)
 
