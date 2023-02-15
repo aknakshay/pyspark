@@ -19,7 +19,7 @@ def plot_skewness(data):
     """
     Converts dataframe to pandas and plot a histogram
     """
-    plot = data.toPandas().hist(column="count")
+    plot = data.toPandas().hist(column="count", log=True)
     plot.flatten()[0].set_xlabel("count of rows in a partition")
     plot.flatten()[0].set_ylabel("number of partitions having this count")
     plot.flatten()[0].set_title("data skewness")
